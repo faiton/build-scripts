@@ -1,7 +1,7 @@
 {
   "name": "faiton-build-scripts",
   "description": "Script processing tools for faiton.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Mushex Antaranian",
   "license": "MIT",
   "keywords": [
