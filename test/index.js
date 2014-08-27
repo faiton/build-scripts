@@ -23,7 +23,6 @@ describe('example', function () {
 
   it('should build scripts', function (done) {
     build.scripts(function (err, js) {
-      console.log(js);
       if (err) return done(err);
 
       var ctx = vm.createContext();
@@ -32,16 +31,4 @@ describe('example', function () {
     })
   })
 
-  it('should build scripts with UMD', function (done) {
-    build.set('umd', 'asdf');
-
-    build.scripts(function (err, js) {
-      if (err) return done(err);
-
-      var ctx = vm.createContext();
-      vm.runInContext(js, ctx);
-      vm.runInContext('if (!this.asdf) throw new Error();', ctx);
-      done();
-    })
-  })
 })
